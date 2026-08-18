@@ -1,0 +1,553 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #080808;
+    color: #fff;
+}
+
+/* -------- HEADER -------- */
+#header{
+    width: 100%;
+    height: 100vh;
+    /*background-image: url("background img happy.png");*/
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #2cd5c4;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #2cd5c4;
+}
+
+/* ---------- ABOUT ----------- */
+#about{
+    padding: 30px;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #2cd5c4;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #2cd5c4;
+    font-size: 14px;
+}
+
+/* -------- SERVICES --------- */
+#services{
+    padding: 30px;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background: #2cd5c4;
+}
+
+/* --------- PORTFOLIO ----------- */
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #2cd5c4);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #2cd5c4;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 60px;
+    display: inline-block;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+/* ------------ BUTTONS ---------- */
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #2cd5c4;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #2cd5c4;
+}
+
+.btn2{
+    background: #2cd5c4;
+    display: inline-block;
+}
+
+/* ----------- CONTACT ----------- */
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #2cd5c4;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin: 30px 0;
+}
+
+.social-icons a{
+    text-decoration: none;
+    color: #ababab;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: #2cd5c4;
+    transform: translateY(-5px);
+}
+
+form input,
+form textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* ------------ SMALL SCREEN ------------ */
+nav .fa-solid{
+    display:none;
+}
+
+@media only screen and (max-width:600px){
+
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    nav .fa-solid{
+        display:block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #2cd5c4;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+
+    .about-col-2{
+        font-size: 14px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    /* ===========================
+      Theme Button
+=========================== */
+
+#theme-toggle{
+    width:45px;
+    height:45px;
+    border:none;
+    outline:none;
+    border-radius:50%;
+    background:#2cd5c4;
+    color:#fff;
+    cursor:pointer;
+    font-size:18px;
+    transition:.4s;
+    margin-left:20px;
+}
+
+#theme-toggle:hover{
+    transform:rotate(180deg);
+    background:#fff;
+    color:#2cd5c4;
+}
+
+/* ===========================
+   Smooth Theme Transition
+=========================== */
+
+body,
+nav,
+#header,
+#about,
+#services,
+#portfolio,
+#contact,
+.services-list div,
+.work,
+.btn,
+input,
+textarea,
+.social-icons a{
+    transition: all .4s ease;
+}
+/* ===========================
+      LIGHT MODE
+=========================== */
+body.light-mode{
+    background:#ffffff;
+    color:#111;
+}
+
+/* Header */
+
+body.light-mode #header{
+    background:#ffffff;
+}
+
+/* Navbar */
+
+body.light-mode nav{
+    background:#ffffff;
+}
+
+body.light-mode nav ul li a{
+    color:#111;
+}
+
+body.light-mode nav ul li a::after{
+    background:#2cd5c4;
+}
+
+/* About */
+
+body.light-mode #about{
+    color:#555;
+}
+
+body.light-mode .sub-title{
+    color:#111;
+}
+
+body.light-mode .tab-links{
+    color:#111;
+}
+
+body.light-mode .tab-contents ul li{
+    color:#333;
+}
+
+/* Services */
+
+body.light-mode .services-list div{
+    background:#f2f2f2;
+    color:#111;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+body.light-mode .services-list div a{
+    color:#111;
+}
+
+body.light-mode .services-list div:hover{
+    background:#2cd5c4;
+    color:#fff;
+}
+
+/* Portfolio */
+
+body.light-mode .layer{
+    background:linear-gradient(rgba(255,255,255,.7),#2cd5c4);
+}
+
+/* Contact */
+
+body.light-mode .contact-left p{
+    color:#111;
+}
+
+body.light-mode .social-icons a{
+    color:#111;
+}
+
+body.light-mode .social-icons a:hover{
+    color:#2cd5c4;
+}
+
+/* Form */
+
+body.light-mode input,
+body.light-mode textarea{
+    background:#f3f3f3;
+    color:#111;
+    border:1px solid #ddd;
+}
+
+/* Buttons */
+
+body.light-mode .btn{
+    color:#111;
+    border-color:#2cd5c4;
+}
+
+body.light-mode .btn2{
+    color:#111;
+}
+}
